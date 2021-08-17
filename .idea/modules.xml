@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Coffee_Machine1.iml" filepath="$PROJECT_DIR$/.idea/modules/Coffee_Machine1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Coffee Machine/task/Coffee_Machine1.Coffee_Machine-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Coffee Machine/task/Coffee_Machine1.Coffee_Machine-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Coffee Machine/task/Coffee_Machine1.Coffee_Machine-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Coffee Machine/task/Coffee_Machine1.Coffee_Machine-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Coffee Machine/task/Coffee_Machine1.Coffee_Machine-task.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Coffee Machine/task/Coffee_Machine1.Coffee_Machine-task.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Calculating factorials/Coffee_Machine1.Topics-Declaring_a_method-Calculating_factorials.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Calculating factorials/Coffee_Machine1.Topics-Declaring_a_method-Calculating_factorials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Calculating factorials/Coffee_Machine1.Topics-Declaring_a_method-Calculating_factorials.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Calculating factorials/Coffee_Machine1.Topics-Declaring_a_method-Calculating_factorials.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/The sign of a number/Coffee_Machine1.Topics-Declaring_a_method-The_sign_of_a_number.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/The sign of a number/Coffee_Machine1.Topics-Declaring_a_method-The_sign_of_a_number.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/The sign of a number/Coffee_Machine1.Topics-Declaring_a_method-The_sign_of_a_number.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/The sign of a number/Coffee_Machine1.Topics-Declaring_a_method-The_sign_of_a_number.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/The sign of a number/Coffee_Machine1.Topics-Declaring_a_method-The_sign_of_a_number.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/The sign of a number/Coffee_Machine1.Topics-Declaring_a_method-The_sign_of_a_number.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Theory/Coffee_Machine1.Topics-Declaring_a_method-Theory.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Theory/Coffee_Machine1.Topics-Declaring_a_method-Theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Theory/Coffee_Machine1.Topics-Declaring_a_method-Theory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Theory/Coffee_Machine1.Topics-Declaring_a_method-Theory.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Theory/Coffee_Machine1.Topics-Declaring_a_method-Theory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Declaring a method/Theory/Coffee_Machine1.Topics-Declaring_a_method-Theory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/String/Check burgs/Coffee_Machine1.Topics-String-Check_burgs.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/String/Check burgs/Coffee_Machine1.Topics-String-Check_burgs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/String/Check burgs/Coffee_Machine1.Topics-String-Check_burgs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/String/Check burgs/Coffee_Machine1.Topics-String-Check_burgs.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/String/Check burgs/Coffee_Machine1.Topics-String-Check_burgs.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/String/Check burgs/Coffee_Machine1.Topics-String-Check_burgs.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/String/Theory/Coffee_Machine1.Topics-String-Theory.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/String/Theory/Coffee_Machine1.Topics-String-Theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/String/Theory/Coffee_Machine1.Topics-String-Theory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/String/Theory/Coffee_Machine1.Topics-String-Theory.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/String/Theory/Coffee_Machine1.Topics-String-Theory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/String/Theory/Coffee_Machine1.Topics-String-Theory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Coffee_Machine1.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Coffee_Machine1.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Coffee_Machine1.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Coffee_Machine1.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Coffee_Machine1.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Coffee_Machine1.util.test.iml" />
+    </modules>
+  </component>
+</project>

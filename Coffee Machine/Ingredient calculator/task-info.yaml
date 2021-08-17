@@ -1,0 +1,314 @@
+type: edu
+custom_name: stage2
+files:
+- name: src/machine/CoffeeMachine.java
+  visible: true
+  text: |
+    package machine;
+
+    public class CoffeeMachine {
+        public static void main(String[] args) {
+
+            System.out.println("Starting to make a coffee\n" +
+                    "Grinding coffee beans\n" +
+                    "Boiling water\n" +
+                    "Mixing boiled water with crushed coffee beans\n" +
+                    "Pouring coffee into the cup\n" +
+                    "Pouring some milk into the cup\n" +
+                    "Coffee is ready!");
+            char c = '1'+'3';
+            System.out.println(c);
+        }
+    }
+  learner_created: false
+- name: test/CoffeeMachineTest.java
+  visible: false
+  text: |
+    import org.hyperskill.hstest.stage.StageTest;
+    import org.hyperskill.hstest.testcase.CheckResult;
+    import org.hyperskill.hstest.testcase.TestCase;
+
+    import java.util.List;
+
+
+    public class CoffeeMachineTest extends StageTest<String> {
+
+        @Override
+        public List<TestCase<String>> generate() {
+            return List.of(
+                new TestCase<String>()
+                    .setInput("25")
+                    .setAttach("25"),
+
+                new TestCase<String>()
+                    .setInput("125")
+                    .setAttach("125"),
+
+                new TestCase<String>()
+                    .setInput("1")
+                    .setAttach("1"),
+
+                new TestCase<String>()
+                    .setInput("123")
+                    .setAttach("123")
+            );
+        }
+
+        @Override
+        public CheckResult check(String reply, String clue) {
+            String[] lines = reply.split("\\n");
+            if (lines.length < 3) {
+                return new CheckResult(false,
+                    "Output contains less than 3 lines, but should output at least 3 lines");
+            }
+            String[] last3Lines = {
+                lines[lines.length - 3],
+                lines[lines.length - 2],
+                lines[lines.length - 1]
+            };
+
+            int cups = Integer.parseInt(clue);
+            boolean water = false, milk = false, beans = false;
+
+            for(String line : last3Lines) {
+                line = line.toLowerCase();
+
+                if(line.contains("milk")) {
+                    milk = line.contains(Integer.toString(cups * 50));
+                    if (!milk) {
+                        return new CheckResult(false,
+                            "For the input " + clue + " your program output:\n\"" +
+                                line + "\"\nbut the amount of milk should be " + (cups * 50));
+                    }
+
+                } else if(line.contains("water")) {
+                    water = line.contains(Integer.toString(cups * 200));
+                    if (!water) {
+                        return new CheckResult(false,
+                            "For the input " + clue + " your program output:\n" +
+                                line + "\nbut the amount of water should be " + (cups * 200));
+                    }
+
+                } else if(line.contains("beans")) {
+                    beans = line.contains(Integer.toString(cups * 15));
+                    if (!beans) {
+                        return new CheckResult(false,
+                            "For the input " + clue + " your program output:\n" +
+                                line + "\nbut the amount of beans should be " + (cups * 15));
+                    }
+
+
+                } else {
+                    return new CheckResult(false,
+                        "One of the last 3 lines " +
+                            "doesn't contain \"milk\", \"water\" or \"beans\"");
+                }
+            }
+
+            if (!water) {
+                return new CheckResult(false,
+                    "There is no line with amount of water");
+            }
+
+            if (!milk) {
+                return new CheckResult(false,
+                    "There is no line with amount of milk");
+            }
+
+            if (!beans) {
+                return new CheckResult(false,
+                    "There is no line with amount of coffee beans");
+            }
+
+            return CheckResult.correct();
+        }
+    }
+  learner_created: false
+- name: src/machine/calculator/Test.java
+  visible: true
+  learner_created: true
+- name: src/machine/coffe/Coffee.java
+  visible: true
+  text: |
+    package machine.coffe;
+
+    public enum Coffee {
+        COFFE(50,200,15);
+        private int amountOfMilkPerOneCoffee;
+        private int amountOfWaterPerOneCoffee;
+        private int amountOfCoffeeBeansPerOneCoffee;
+
+        Coffee(){
+
+        }
+
+        Coffee(int amountOfMilkPerOneCoffee,int amountOfWaterPerOneCoffee,int amountOfCoffeeBeansPerOneCoffee){
+            this.amountOfMilkPerOneCoffee = amountOfMilkPerOneCoffee;
+            this.amountOfWaterPerOneCoffee = amountOfWaterPerOneCoffee;
+            this.amountOfCoffeeBeansPerOneCoffee = amountOfCoffeeBeansPerOneCoffee;
+
+        }
+
+        public int getAmountOfMilkPerOneCoffee() {
+            return amountOfMilkPerOneCoffee;
+        }
+
+        public int getAmountOfWaterPerOneCoffee() {
+            return amountOfWaterPerOneCoffee;
+        }
+
+        public int getAmountOfCoffeeBeansPerOneCoffee() {
+            return amountOfCoffeeBeansPerOneCoffee;
+        }
+    }
+  learner_created: true
+- name: src/machine/calculator/Calculator.java
+  visible: true
+  text: |
+    package machine.calculator;
+
+    public class Calculator {
+
+        public void calculator(){
+
+        }
+    }
+  learner_created: true
+- name: src/machine/main/CoffeeMachine.java
+  visible: true
+  text: |
+    package machine.main;
+
+    import machine.calculator.Calculator;
+    import machine.calculator.Test;
+    import machine.coffe.Coffee;
+
+
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.Scanner;
+    import java.util.stream.Collectors;
+    import java.util.stream.Stream;
+
+    public class CoffeeMachine {
+        static final private Scanner sc = new Scanner(System.in);
+        private int  amount_water;
+        private int amount_milk;
+        private int amount_coffeeBeans;
+
+        public CoffeeMachine(){
+
+        }
+
+        public CoffeeMachine(int amount_water, int amount_milk, int amount_coffeeBeans) {
+            this.amount_water = amount_water;
+            this.amount_milk = amount_milk;
+            this.amount_coffeeBeans = amount_coffeeBeans;
+        }
+
+
+
+        private int coffeePortionCalculator (Coffee coffee){
+            int coffeeFromWaterWillTurnOut = amount_water/coffee.getAmountOfWaterPerOneCoffee();
+            int coffeeFromMilkWillTurnOut = amount_milk/coffee.getAmountOfMilkPerOneCoffee();
+            int coffeeFromCoffee_BeansWillTurnOut = amount_coffeeBeans/coffee.getAmountOfCoffeeBeansPerOneCoffee();
+
+            List<Integer> servingsCoffee  =
+                     Stream.of(coffeeFromWaterWillTurnOut,coffeeFromMilkWillTurnOut,coffeeFromCoffee_BeansWillTurnOut)
+                             .sorted()
+                             .collect(Collectors.toList());
+
+            return servingsCoffee.get(0);
+
+        }
+
+        public void start(){
+            decisionToMakeCoffee(Coffee.COFFE);
+
+
+        }
+
+        private void fillFheCoffeeMachine(){
+            System.out.println(" Write how many ml of water the coffee machine has:");
+            amount_water = sc.nextInt();
+            System.out.println(" Write how many ml of milk the coffee machine has:");
+            amount_milk = sc.nextInt();
+            System.out.println(" Write how many grams of coffee beans the coffee machine has:");
+            amount_coffeeBeans = sc.nextInt();
+
+
+
+
+        }
+
+        private void decisionToMakeCoffee (Coffee coffee){
+            fillFheCoffeeMachine();
+            System.out.println(" Write how many cups of coffee you will need:");
+            int needCoffee = sc.nextInt();
+            int availableServings = coffeePortionCalculator(coffee);
+            int difference  = availableServings - needCoffee;
+
+            if (difference == 0){
+                System.out.println("Yes, I can make that amount of coffee");
+            }
+            else if (difference > 0){
+                System.out.printf("Yes, I can make that amount of coffee (and even %d more than that)/n",difference);
+            }
+            else {
+                System.out.printf("No, I can make only %d cup(s) of coffee\n",availableServings);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+    }
+  learner_created: true
+- name: src/machine/main/Main.java
+  visible: true
+  text: |
+    package machine.main;
+
+    import machine.coffe.Coffee;
+
+    public class Main {
+        public static void main(String[] args) {
+           /* CoffeeMachine coffeeMachine = new CoffeeMachine();
+            coffeeMachine.start();*/
+            int i = 0;
+            for (int k = 0; k < 100; k++) {
+                System.out.println(i);
+                i = i++;
+                System.out.println("bef " + i);
+            }
+            System.out.println("el");
+            System.out.println(i);
+
+        }
+    }
+  learner_created: true
+feedback_link: https://hyperskill.org/projects/33/stages/176/implement#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 31 Jul 2021 15:30:41 UTC
+record: 2
